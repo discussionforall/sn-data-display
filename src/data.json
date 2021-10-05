@@ -1,0 +1,53 @@
+﻿[
+  {
+    "PRN": 5,
+    "CH": 1,
+    "STATE": "mhg",
+    "SOURCE": "jt",
+    "LOCKED": "zgg",
+    "LOCKTIME": 2.3,
+    "SNR": 4.5,
+    "AZ_P": 456.3,
+    "EL_P": 45.2,
+    "AZ_M": 20620.2,
+    "EL_M": 50.3,
+    "AF_F": 851.2,
+    "EL_F": 441.99,
+    "L2C": 241.2,
+    "AVGSNR": 150.52
+  },
+  {
+    "PRN": 1,
+    "CH": 3,
+    "STATE": "aff",
+    "SOURCE": "re",
+    "LOCKED": "kuj",
+    "LOCKTIME": 2.3,
+    "SNR": 43.5,
+    "AZ_P": 38.3,
+    "EL_P": 40.5,
+    "AZ_M": 8.2,
+    "EL_M": 5.3,
+    "AF_F": 36.2,
+    "EL_F": 35.99,
+    "L2C": 23.2,
+    "AVGSNR": 15.52
+  },
+  {
+    "PRN": 1,
+    "CH": 2,
+    "STATE": "hh",
+    "SOURCE": "kh",
+    "LOCKED": "qw",
+    "LOCKTIME": 2.3,
+    "SNR": 8.5,
+    "AZ_P": 32.3,
+    "EL_P": 40.2,
+    "AZ_M": 32.2,
+    "EL_M": 201.3,
+    "AF_F": 1221.2,
+    "EL_F": 425.99,
+    "L2C": 202.2,
+    "AVGSNR": 105.52
+  }
+]
