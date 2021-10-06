@@ -1,17 +1,18 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import data from '../data.json';
+import data from '../Json/data.json';
+import test from '../Json/test.json'
 
 let keys;
 let getdata = false;
 
-if (data.length !== 0) {
-    keys = Object.keys(data[0])
+if (test.Tracking.length !== 0) {
+    keys = Object.keys(test.Tracking[0])
     getdata = true
 }
 function Table() {
     let activeId = null;
-    const [tableData, setTableData] = useState(data)
+    const [tableData, setTableData] = useState(test.Tracking)
     const [isActive, setIsActive] = useState()
     const accOrder = (key) => {
         activeId = key
@@ -28,11 +29,11 @@ function Table() {
         setTableData(myData)
     }
 
-    const handleClick =( id) => {
+    const handleClick = (id) => {
         console.log(id)
         setIsActive(id)
-      }
-      
+    }
+
 
     return (
         (getdata === true) ? (
@@ -42,14 +43,12 @@ function Table() {
                         <thead>
                             {
                                 keys.map((key) => (
-                                    <th>{key} <a onClick={() => accOrder(key)}>
-                                        <span className="iconBox" className={ isActive === key && 'is-active' } onClick={ () => handleClick((key)) }>
-                                            <i className="fa fa-caret-up upArrow sortingAsc" aria-hidden="true"></i>
-                                        </span></a>
-                                        <a onClick={() => decOrder(key)} >
-                                            <span className="iconBox" className={ isActive === 'dec'+key && 'is-active' } onClick={ () => handleClick('dec'+key) }>
-                                                <i className="fa fa-caret-down downArrow" aria-hidden="true"></i>
-                                            </span></a>
+                                    <th>{key}
+                                        <span className="iconBox">
+                                            <a className={isActive === key && 'is-active'} onClick={() => handleClick((key))}> <i onClick={() => accOrder(key)} className="fa fa-caret-up upArrow sortingAsc" aria-hidden="true"></i></a>
+
+                                            <a className={isActive === 'dec' + key && 'is-active'} onClick={() => handleClick('dec' + key)}> <i onClick={() => decOrder(key)} className="fa fa-caret-down downArrow" aria-hidden="true"></i></a>
+                                        </span>
                                     </th>
                                 ))
                             }

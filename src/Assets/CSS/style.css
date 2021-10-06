@@ -33,6 +33,11 @@ body{
     padding: 15px 10px;
     font-size: 14px;
     text-align: center;
+    position: relative;
+    padding-right: 25px;
+}
+span.iconBox a {
+    text-decoration: none;
 }
 .table-striped>tbody>tr>td {
     font-size: 14px;
@@ -40,6 +45,21 @@ body{
     font-weight: 500;
     color: #444;
     padding: 15px 5px;
+}
+span.iconBox {
+    display: inline-block;
+    position: absolute;
+    top: 47%;
+    transform: translateY(-47%);
+}
+.iconBox .fa {
+    position: static;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #adadad;
+    height: 0px;
+    display: block;
+    margin-bottom: 10px;
 }
 .table-striped>tbody>tr:nth-of-type(even) {
     background-color: #e5e1f9;
@@ -54,26 +74,19 @@ body{
     position: relative;
     padding: 0px !important;
 }
-.iconBox .fa {
-    position: absolute;
-    font-size: 14px;
-    margin-left: 10px;
-    color: #adadad;
-}
 .upArrow {
     top: -2px;
     cursor: pointer;
 }
 .downArrow {
-    bottom: -2px;
     cursor: pointer;
 }
 .sortingAsc {
     font-size: 14px !important;
 } 
-.is-active{
-    color: red;
-  }
+.is-active i{
+    color: white !important;
+}
 @media only screen and (min-width: 320px) and (max-width: 575px) {
     .logoHeader {
         width: 70px;
@@ -85,13 +98,14 @@ body{
     .table>thead>th{
         padding: 15px;
         font-size: 12px;
+        position: relative;
+        padding-right: 25px;
     }
     .upArrow {
         top: -2px;
         cursor: pointer;
     }
     .downArrow {
-        bottom: -2px;
         cursor: pointer;
     }
 }
@@ -106,13 +120,14 @@ body{
     .table>thead>th{
         padding: 15px;
         font-size: 12px;
+        position: relative;
+        padding-right: 25px;
     }
     .upArrow {
         top: -2px;
         cursor: pointer;
     }
     .downArrow {
-        bottom: -2px;
         cursor: pointer;
     }
 }
@@ -124,13 +139,14 @@ body{
     .table>thead>th{
         padding: 15px 20px;
         font-size: 12px;
+        position: relative;
+        padding-right: 25px;
     }
     .upArrow {
         top: -2px;
         cursor: pointer;
     }
     .downArrow {
-        bottom: -2px;
         cursor: pointer;
     }
 }
