@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import data from '../Json/data.json';
 import test from '../Json/test.json'
 
 let keys;
 let getdata = false;
 
 if (test.Tracking.length !== 0) {
-    keys = Object.keys(test.Tracking[0])
+    keys = ["PRN","Channel","State","Source","Locked","Lock_Time_S","SNR_DB","AZ_P_Deg","EL_P_Deg","AZ_M_Deg","EL_M_Deg","AF_F","EL_F","Band","Avg_SNR_DB"]
     getdata = true
 }
 function Table() {
@@ -43,10 +42,9 @@ function Table() {
                         <thead>
                             {
                                 keys.map((key) => (
-                                    <th>{key}
+                                    <th>{key.toUpperCase()}
                                         <span className="iconBox">
                                             <a className={isActive === key && 'is-active'} onClick={() => handleClick((key))}> <i onClick={() => accOrder(key)} className="fa fa-caret-up upArrow sortingAsc" aria-hidden="true"></i></a>
-
                                             <a className={isActive === 'dec' + key && 'is-active'} onClick={() => handleClick('dec' + key)}> <i onClick={() => decOrder(key)} className="fa fa-caret-down downArrow" aria-hidden="true"></i></a>
                                         </span>
                                     </th>
